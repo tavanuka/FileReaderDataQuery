@@ -18,7 +18,7 @@ namespace DataQueryInsert
                 key = Console.ReadKey(true);
 
                 // Ignore any key out of range.
-                if (((int)key.Key) >= 0 )
+                if (((int)key.Key) >= 14 )
                 {
                     // Append the character to the password.
                     pw.AppendChar(key.KeyChar);
