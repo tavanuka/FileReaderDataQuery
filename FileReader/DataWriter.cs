@@ -9,13 +9,6 @@ namespace FileReader
 {
     public static class DataWriter
     {
-        public static IList<T> Clone<T>(this IList<T> ListToClone) where T: ICloneable
-        {
-            return ListToClone.Select(item => (T)item.Clone()).ToList();
-        }
-        public static void DataWrite()
-        {
-            
-        }
+       
     }
 }

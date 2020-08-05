@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -47,6 +48,17 @@ namespace FileReader
             {
                 csv.WriteRecords(pd.Person);
             }
+        }
+        
+        public  List<PersonData> CsvRead(string InputPath)
+        {
+            using (var reader = new StreamReader(InputPath))
+                using (var csr = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                var records = csr.GetRecords<PersonData>();
+                var rec = records.ToList();
+                return rec;
+                }
         }
         public PersonData pd = new PersonData();
     }
