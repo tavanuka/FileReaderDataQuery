@@ -16,7 +16,7 @@ namespace FileReader
         {
             using (StreamReader sr = new StreamReader(inputPath))
             {
-                
+
                 string line = "";
                 while ((line = sr.ReadLine()) != null)
                 {
@@ -29,18 +29,17 @@ namespace FileReader
                             FirstName = obj[0],
                             LastName = obj[1],
                             Gender = obj[2],
-                            DateOfBirth = obj[3],
-                            TimeOfBirth = obj[4],
+                            DateOfBirth = Convert.ToDateTime(obj[3]),
+                            TimeOfBirth = Convert.ToDateTime(obj[4]),
                             City = obj[5],
                             Country = obj[6]
-                        }); 
+                        });
                         Console.WriteLine(line);
                     }
-
                 }
             }
-
         }
+
         public void WriteLine(string InputPath)
         {
             using (var writer = new StreamWriter(InputPath))
@@ -49,17 +48,33 @@ namespace FileReader
                 csv.WriteRecords(pd.Person);
             }
         }
-        
-        public  List<PersonData> CsvRead(string InputPath)
+
+        public List<PersonData> CsvRead(string InputPath)
         {
             using (var reader = new StreamReader(InputPath))
-                using (var csr = new CsvReader(reader, CultureInfo.InvariantCulture))
-                {
+            using (var csr = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
                 var records = csr.GetRecords<PersonData>();
                 var rec = records.ToList();
                 return rec;
-                }
+            }
         }
+
+        public List<CountryData> StreamReader(string inputPath)
+        {
+            var output = File.ReadAllLines(inputPath);
+
+            for (var i = 0; i < output.Length; i++)
+            {
+                cd.Country.Add(new CountryData()
+                {
+                    CountryName = output[i]
+                });
+            }
+            return cd.Country;
+        }
+
+        public CountryData cd = new CountryData();
         public PersonData pd = new PersonData();
     }
 }

@@ -10,7 +10,6 @@ namespace FileReader
         public PersonData()
         {
             Person = new List<PersonData>();
-
         }
         public List<PersonData> Person { get; set; }
         public string FirstName { get; set; }
@@ -19,16 +18,13 @@ namespace FileReader
 
         public string Gender { get; set; }
 
-        public string DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
-
-        public string TimeOfBirth { get; set; }
+        public DateTime TimeOfBirth { get; set; }
 
         public string City { get; set; }
 
         public string Country { get; set; }
-
-        private string mDateOfBirth;
     }
 
 }

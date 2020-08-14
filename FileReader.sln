@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileReader", "FileReader\FileReader.csproj", "{8C68DF50-4C92-4795-A593-B7AE291D25B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataQueryInsert", "DataQueryInsert\DataQueryInsert.csproj", "{D10173C5-136B-44B2-A510-69100DFEF982}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataQueryInsert", "DataQueryInsert\DataQueryInsert.csproj", "{D10173C5-136B-44B2-A510-69100DFEF982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQueryInsert", "CountryQueryInsert\CountryQueryInsert.csproj", "{0CA47B48-B133-4546-8D6E-170DC0C3A4E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D10173C5-136B-44B2-A510-69100DFEF982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D10173C5-136B-44B2-A510-69100DFEF982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D10173C5-136B-44B2-A510-69100DFEF982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA47B48-B133-4546-8D6E-170DC0C3A4E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA47B48-B133-4546-8D6E-170DC0C3A4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA47B48-B133-4546-8D6E-170DC0C3A4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA47B48-B133-4546-8D6E-170DC0C3A4E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
